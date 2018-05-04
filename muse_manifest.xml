@@ -1,0 +1,132 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://pubgcpn.win" resolutions="1x" timestamp="1525458233508">
+  <folder name="tablet">
+    <folder name="css">
+      <file name="index.css" crc="409729898" ref="tablet>index"/>
+      <file name="nomq_index.css" crc="3824530138" ref="tablet>index"/>
+      <file name="iefonts_index.css" crc="4099332410" ref="tablet>index"/>
+    </folder>
+    <file name="index.html" crc="4050755754" seo="true" mt="1525456590850" redirect="true"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="index.css" crc="4222009304" ref="phone>index"/>
+      <file name="iefonts_index.css" crc="3850210858" ref="phone>index"/>
+      <file name="commands.css" crc="3986761563" ref="phone>commands"/>
+      <file name="nomq_commands.css" crc="3824530138" ref="phone>commands"/>
+    </folder>
+    <file name="index.html" crc="4136279755" seo="true" mt="1525457689000" redirect="true"/>
+    <file name="commands.html" crc="3959528437" seo="true" mt="1525457941602" redirect="true"/>
+  </folder>
+  <folder name="css">
+    <file name="site_global.css" crc="4221307191"/>
+    <file name="index.css" crc="4072718650" ref="index"/>
+    <file name="nomq_index.css" crc="220029905" ref="index"/>
+    <file name="iefonts_index.css" crc="3824530138" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:phone>index:phone>commands:tablet>index"/>
+    <file name="museutils.js" crc="340535759" ref="index:phone>index:phone>commands:tablet>index"/>
+    <file name="whatinput.js" crc="86476730" ref="index:phone>index:phone>commands:tablet>index"/>
+    <file name="museconfig.js" crc="310584261" ref="index:phone>index:phone>commands:tablet>index"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:phone>index:phone>commands:tablet>index"/>
+    <file name="jquery.scrolleffects.js" crc="39568856" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="527716135" ref="index"/>
+    <file name="require.js" crc="7928878" ref="index:phone>index:phone>commands:tablet>index"/>
+  </folder>
+  <folder name="images">
+    <file name="pubg_aaaaaaaa.png" crc="4212590660" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="plane_pubg.png" crc="4036207197" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u274-4.png" crc="274294461" ref="index"/>
+    <file name="u1587-4.png" crc="4109969081" ref="index"/>
+    <file name="u1613-4.png" crc="4143686609" ref="index"/>
+    <file name="u177.png" crc="4075301655" ref="index"/>
+    <file name="u177-r.png" crc="4127611287" ref="index"/>
+    <file name="u177-m.png" crc="4127611287" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="background_pubg1393x784.jpg" crc="204890040" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="whitebackground1393x784.png" crc="4098358116" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="pubgbotfull.png" crc="448697877" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u1555-4.png" crc="274294461" ref="index"/>
+    <file name="u1603-4.png" crc="3865446142" ref="index"/>
+    <file name="main_mask03.jpg" crc="271286303" seo="true" ref="index:phone>index:tablet>index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u1270-4.png" crc="383914799" ref="index"/>
+    <file name="u1270-42.png" crc="383914799" ref="index"/>
+    <file name="u1603-42.png" crc="270206302" ref="index"/>
+    <file name="background_pubg.jpg" crc="4216811803" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="whitebackground.png" crc="4024736139" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u1555-42.png" crc="294952813" ref="index"/>
+    <file name="u274-42.png" crc="294952813" ref="index"/>
+    <file name="u1587-42.png" crc="3934575102" ref="index"/>
+    <file name="u1613-42.png" crc="4082998168" ref="index"/>
+    <file name="u1772.png" crc="382491970" ref="index"/>
+    <file name="u177-r2.png" crc="174422838" ref="index"/>
+    <file name="u177-m2.png" crc="174422838" ref="index"/>
+    <file name="pubgbotfull320x160.png" crc="3867649636" seo="true" ref="phone>index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="plane_pubg271x153.png" crc="105952295" seo="true" ref="phone>index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u2683-4.png" crc="535601159" ref="phone>index"/>
+    <file name="trello.png" crc="52007503" seo="true" ref="phone>index:tablet>index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u2381-4.png" crc="4102456169" ref="phone>index"/>
+    <file name="discord-logo-white.png" crc="106123978" seo="true" ref="phone>index:tablet>index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u2378-4.png" crc="4075322579" ref="phone>index"/>
+    <file name="u2033.png" crc="4112649034" ref="phone>index"/>
+    <file name="u2033-r.png" crc="333827575" ref="phone>index"/>
+    <file name="u2033-m.png" crc="333827575" ref="phone>index"/>
+    <file name="u2850-4.png" crc="383693445" ref="phone>index"/>
+    <file name="u2884-4.png" crc="93780687" ref="phone>index"/>
+    <file name="u3657-4.png" crc="396912128" ref="phone>commands"/>
+    <file name="u3087-4.png" crc="4265517089" ref="phone>commands"/>
+    <file name="pubgbotfull744x372.png" crc="3815544926" seo="true" ref="tablet>index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u3558-4.png" crc="535601159" ref="tablet>index"/>
+    <file name="plane_pubg287x162.png" crc="3944264861" seo="true" ref="tablet>index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u3420-4.png" crc="4102456169" ref="tablet>index"/>
+    <file name="u3419-4.png" crc="4075322579" ref="tablet>index"/>
+    <file name="u3414.png" crc="4112649034" ref="tablet>index"/>
+    <file name="u3414-r.png" crc="333827575" ref="tablet>index"/>
+    <file name="u3414-m.png" crc="333827575" ref="tablet>index"/>
+    <file name="u3588-4.png" crc="383693445" ref="tablet>index"/>
+    <file name="u3696-4.png" crc="383914799" ref="tablet>index"/>
+    <file name="u3697-4.png" crc="278797858" ref="tablet>index"/>
+    <file name="favicon.ico" crc="4265138217" ref="index"/>
+    <file name="u2247-4.png" crc="299650380" ref="index"/>
+    <file name="u2247-42.png" crc="3881747302" ref="index"/>
+  </folder>
+  <file name="index.html" crc="4048959773" seo="true" mt="1525458154294" redirect="true"/>
+</manifest>
