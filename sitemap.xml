@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pubgcpn.win/index.html</loc>
-    <lastmod>2018-05-04</lastmod>
+    <lastmod>2018-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://pubgcpn.win/phone/index.html"/>
@@ -12,12 +12,6 @@
     </image:image>
     <image:image>
       <image:loc>https://pubgcpn.win/images/plane_pubg.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://pubgcpn.win/images/background_pubg1393x784.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://pubgcpn.win/images/whitebackground1393x784.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://pubgcpn.win/images/pubgbotfull.png</image:loc>
@@ -30,6 +24,18 @@
     </image:image>
     <image:image>
       <image:loc>https://pubgcpn.win/images/whitebackground.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pubgcpn.win/images/background_pubg979x551.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pubgcpn.win/images/whitebackground979x551.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pubgcpn.win/images/background_pubg894x503.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pubgcpn.win/images/whitebackground894x503.png</image:loc>
     </image:image>
   </url>
   <url>
