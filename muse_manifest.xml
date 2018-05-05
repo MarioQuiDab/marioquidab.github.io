@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://pubgcpn.win" resolutions="1x" timestamp="1525507955148">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://pubgcpn.win" resolutions="1x" timestamp="1525508561813">
   <folder name="tablet">
     <folder name="css">
       <file name="index.css" crc="3763403680" ref="tablet>index"/>
@@ -9,14 +9,13 @@
   </folder>
   <folder name="phone">
     <folder name="css">
-      <file name="index.css" crc="483776750" ref="phone>index"/>
+      <file name="index.css" crc="3854870105" ref="phone>index"/>
       <file name="iefonts_index.css" crc="3824530138" ref="phone>index"/>
-      <file name="commands.css" crc="3986761563" ref="phone>commands"/>
-      <file name="nomq_commands.css" crc="3824530138" ref="phone>commands"/>
-      <file name="nomq_index.css" crc="3831249246" ref="phone>index"/>
+      <file name="commands.css" crc="4091709964" ref="phone>commands"/>
+      <file name="nomq_index.css" crc="87311051" ref="phone>index"/>
     </folder>
-    <file name="index.html" crc="139154665" seo="true" mt="1525507920520" redirect="true"/>
-    <file name="commands.html" crc="3959528437" seo="true" mt="1525457941602" redirect="true"/>
+    <file name="index.html" crc="4152579345" seo="true" mt="1525508265347" redirect="true"/>
+    <file name="commands.html" crc="320180242" seo="true" mt="1525508546299" redirect="true"/>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="4221307191"/>
@@ -61,9 +60,6 @@
     <file name="main_mask03.jpg" crc="271286303" seo="true" ref="index:phone>index:tablet>index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
-      <caption webpage="index" alt=""/>
-      <caption webpage="index" alt=""/>
-      <caption webpage="index" alt=""/>
     </file>
     <file name="u1270-4.png" crc="252792713" ref="index"/>
     <file name="u1270-42.png" crc="252792713" ref="index"/>
@@ -103,8 +99,7 @@
     <file name="u2033-m.png" crc="333827575" ref="phone>index"/>
     <file name="u2850-4.png" crc="391704916" ref="phone>index"/>
     <file name="u2884-4.png" crc="117559972" ref="phone>index"/>
-    <file name="u3657-4.png" crc="396912128" ref="phone>commands"/>
-    <file name="u3087-4.png" crc="4265517089" ref="phone>commands"/>
+    <file name="u3087-4.png" crc="515953279" ref="phone>commands"/>
     <file name="pubgbotfull744x372.png" crc="3815544926" seo="true" ref="tablet>index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
