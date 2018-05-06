@@ -1,26 +1,27 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://pubgcpn.win" resolutions="1x" timestamp="1525508561813">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://pubgcpn.win" resolutions="1x" timestamp="1525597631843">
   <folder name="tablet">
     <folder name="css">
-      <file name="index.css" crc="3763403680" ref="tablet>index"/>
-      <file name="nomq_index.css" crc="4062630164" ref="tablet>index"/>
+      <file name="index.css" crc="4103289090" ref="tablet>index"/>
+      <file name="nomq_index.css" crc="158510825" ref="tablet>index"/>
       <file name="iefonts_index.css" crc="3824530138" ref="tablet>index"/>
     </folder>
-    <file name="index.html" crc="3853360157" seo="true" mt="1525507156248" redirect="true"/>
+    <file name="index.html" crc="445927318" seo="true" mt="1525597618183" redirect="true"/>
   </folder>
   <folder name="phone">
     <folder name="css">
-      <file name="index.css" crc="3854870105" ref="phone>index"/>
+      <file name="index.css" crc="3870507076" ref="phone>index"/>
       <file name="iefonts_index.css" crc="3824530138" ref="phone>index"/>
-      <file name="commands.css" crc="4091709964" ref="phone>commands"/>
-      <file name="nomq_index.css" crc="87311051" ref="phone>index"/>
+      <file name="commands.css" crc="3955855018" ref="phone>commands"/>
+      <file name="nomq_index.css" crc="243351364" ref="phone>index"/>
+      <file name="nomq_commands.css" crc="3824530138" ref="phone>commands"/>
     </folder>
-    <file name="index.html" crc="4152579345" seo="true" mt="1525508265347" redirect="true"/>
-    <file name="commands.html" crc="320180242" seo="true" mt="1525508546299" redirect="true"/>
+    <file name="index.html" crc="463435842" seo="true" mt="1525509306185" redirect="true"/>
+    <file name="commands.html" crc="3812068770" seo="true" mt="1525597583463" redirect="true"/>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="4221307191"/>
-    <file name="index.css" crc="315638624" ref="index"/>
-    <file name="nomq_index.css" crc="132360348" ref="index"/>
+    <file name="index.css" crc="3961847324" ref="index"/>
+    <file name="nomq_index.css" crc="4161557826" ref="index"/>
     <file name="iefonts_index.css" crc="3824530138" ref="index"/>
   </folder>
   <folder name="scripts">
@@ -60,6 +61,15 @@
     <file name="main_mask03.jpg" crc="271286303" seo="true" ref="index:phone>index:tablet>index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
     </file>
     <file name="u1270-4.png" crc="252792713" ref="index"/>
     <file name="u1270-42.png" crc="252792713" ref="index"/>
@@ -85,9 +95,27 @@
     <file name="trello.png" crc="52007503" seo="true" ref="phone>index:tablet>index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
     </file>
     <file name="u2381-4.png" crc="4173230895" ref="phone>index"/>
-    <file name="discord-logo-white.png" crc="106123978" seo="true" ref="phone>index:tablet>index">
+    <file name="discord-logo-white.png" crc="4092976094" seo="true" ref="phone>index:tablet>index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
@@ -99,7 +127,6 @@
     <file name="u2033-m.png" crc="333827575" ref="phone>index"/>
     <file name="u2850-4.png" crc="391704916" ref="phone>index"/>
     <file name="u2884-4.png" crc="117559972" ref="phone>index"/>
-    <file name="u3087-4.png" crc="515953279" ref="phone>commands"/>
     <file name="pubgbotfull744x372.png" crc="3815544926" seo="true" ref="tablet>index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
@@ -136,7 +163,7 @@
     <file name="u3414-m2.png" crc="333827575" ref="tablet>index"/>
     <file name="u3588-42.png" crc="391704916" ref="tablet>index"/>
     <file name="u3696-42.png" crc="252792713" ref="tablet>index"/>
-    <file name="u3697-42.png" crc="4123281750" ref="tablet>index"/>
+    <file name="u3697-42.png" crc="425063431" ref="tablet>index"/>
     <file name="u3558-43.png" crc="235887451" ref="tablet>index"/>
     <file name="u3420-43.png" crc="4112934491" ref="tablet>index"/>
     <file name="u3419-43.png" crc="3981552608" ref="tablet>index"/>
@@ -145,7 +172,7 @@
     <file name="u3414-m3.png" crc="333827575" ref="tablet>index"/>
     <file name="u3588-43.png" crc="391704916" ref="tablet>index"/>
     <file name="u3696-43.png" crc="252792713" ref="tablet>index"/>
-    <file name="u3697-43.png" crc="246491531" ref="tablet>index"/>
+    <file name="u3697-43.png" crc="3981444919" ref="tablet>index"/>
     <file name="u3558-44.png" crc="235887451" ref="tablet>index"/>
     <file name="u3420-44.png" crc="4112934491" ref="tablet>index"/>
     <file name="u3419-44.png" crc="3981552608" ref="tablet>index"/>
@@ -154,7 +181,7 @@
     <file name="u3414-m4.png" crc="333827575" ref="tablet>index"/>
     <file name="u3588-44.png" crc="391704916" ref="tablet>index"/>
     <file name="u3696-44.png" crc="252792713" ref="tablet>index"/>
-    <file name="u3697-44.png" crc="523507754" ref="tablet>index"/>
+    <file name="u3697-44.png" crc="281793415" ref="tablet>index"/>
     <file name="u3558-45.png" crc="235887451" ref="tablet>index"/>
     <file name="u3420-45.png" crc="4112934491" ref="tablet>index"/>
     <file name="u3419-45.png" crc="3981552608" ref="tablet>index"/>
@@ -163,7 +190,7 @@
     <file name="u3414-m5.png" crc="333827575" ref="tablet>index"/>
     <file name="u3588-45.png" crc="391704916" ref="tablet>index"/>
     <file name="u3696-45.png" crc="252792713" ref="tablet>index"/>
-    <file name="u3697-45.png" crc="3767338853" ref="tablet>index"/>
+    <file name="u3697-45.png" crc="133310592" ref="tablet>index"/>
     <file name="u3558-46.png" crc="235887451" ref="tablet>index"/>
     <file name="u3420-46.png" crc="4112934491" ref="tablet>index"/>
     <file name="u3419-46.png" crc="3981552608" ref="tablet>index"/>
@@ -172,7 +199,7 @@
     <file name="u3414-m6.png" crc="333827575" ref="tablet>index"/>
     <file name="u3588-46.png" crc="391704916" ref="tablet>index"/>
     <file name="u3696-46.png" crc="252792713" ref="tablet>index"/>
-    <file name="u3697-46.png" crc="3765980293" ref="tablet>index"/>
+    <file name="u3697-46.png" crc="188470933" ref="tablet>index"/>
     <file name="background_pubg979x551.jpg" crc="3847409739" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
@@ -196,5 +223,5 @@
     <file name="u1270-43.png" crc="252792713" ref="index"/>
     <file name="u1603-43.png" crc="79456079" ref="index"/>
   </folder>
-  <file name="index.html" crc="3938843342" seo="true" mt="1525507933401" redirect="true"/>
+  <file name="index.html" crc="201006997" seo="true" mt="1525597475066" redirect="true"/>
 </manifest>
