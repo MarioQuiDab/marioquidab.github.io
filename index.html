@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
+<title>PUBG Companion, a PUBG Discord Bot</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="description" content="Meet PUBG Companion, a PUBG Discord Bot powered by discordjs and the official PUBG API!">
 <meta name="keywords" content="discord, discord bot, pubg, pubg bot, discord bots, bot, discordjs">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="images/favicon.ico?crc=4265138217">
 <meta name="theme-color" content="#F19F00">	
-<title>PUBG Companion, a PUBG Discord Bot</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -103,8 +101,8 @@ function isInViewport(node) {
     <a href="#commands" class="w3-bar-item w3-button w3-hide-small">COMMANDS</a>
 	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
     <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button w3-hide-small w3-hover-indigo"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
-    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=519232&scope=bot" class="w3-bar-item w3-button w3-hide-small w3-right w3-blue w3-hover-amber">INVITE THE BOT</a>
-	<a href="#info" class="w3-bar-item w3-button w3-hide-small w3-right w3-deep-orange w3-hover-amber">DONATE</a>
+    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-hide-small w3-right w3-blue w3-hover-amber">INVITE THE BOT</a>
+	<a href="premium.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-deep-orange w3-hover-amber">PREMIUM</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -113,13 +111,19 @@ function isInViewport(node) {
     <a href="#commands" class="w3-bar-item w3-button" onclick="toggleFunction()">COMMANDS</a>
 	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
     <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
-    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=519232&scope=bot" class="w3-bar-item w3-button w3-blue">INVITE THE BOT</a>
-	<a href="#info" class="w3-bar-item w3-button w3-deep-orange">DONATE</a>
+    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-blue">INVITE THE BOT</a>
+	<a href="premium.html" class="w3-bar-item w3-button w3-deep-orange">PREMIUM</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="parallax w3-display-container" id="home" data-image-src="https://raw.githubusercontent.com/MarioQuiDab/marioquidab.github.io/master/PUBGBack.png">
+	<div class="w3-display-left w3-text-white" style="padding:48px">
+		<span class="w3-jumbo w3-hide-small">PUBG Companion</span><br>
+		<span class="w3-xxlarge w3-hide-large w3-hide-medium">PUBG Companion</span><br>
+		<span class="w3-large">Player seasonal stats, match summaries and rating role ranking system</span>
+		<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+	</div> 
 </div>
 
 <!-- Container (About Section) -->
@@ -133,8 +137,8 @@ function isInViewport(node) {
     on discordbots.org
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3<i class="fa fa-terminal w3-margin-left"></i></span><br>
-    Active developers
+    <span class="w3-xlarge">Featured app<i class="fas fa-thumbtack w3-margin-left"></i></span><br>
+    on developer.pubg.com
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">Regular<i class="fa fa-plus w3-margin-left"></i></span><br>
@@ -176,6 +180,17 @@ function isInViewport(node) {
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
       <p><b>Link your PUBG player name and region to the bot</b><br>• A mini profile for you that contains your linked PUBG name and region<br>• Use PUBG commands without the need to retype and specify your player name and region</p>
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fab fa-discord w3-margin-right"></i>Rating Role system</b></p><br>
+      <img src="https://image.ibb.co/nNtY4p/Capture.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Rating role system" width="640" height="662">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p><b>Create pubg roles to sort your member based on their highest pubg rating</b><br>• 5 pubg roles with different ranking tiers<br>• Use p!role to allow PUBG Companion to automatically award you a role based on your highest rating accross all game modes</p>
     </div>
   </div>
   <div class="w3-row">
@@ -243,6 +258,11 @@ function isInViewport(node) {
       <td>PUBG</td>
     </tr>
 	<tr>
+      <td>Role</td>
+      <td>Gives you to a role based on your highest rating across all gamemodes</td>
+      <td>PUBG</td>
+    </tr>
+	<tr>
       <td>Profile</td>
       <td>Shows your discord profile with your player name and region</td>
       <td>PUBG</td>
@@ -255,6 +275,11 @@ function isInViewport(node) {
 	<tr>
       <td>Strat</td>
       <td>Strat Roulette! Generates a stupid strat for PUBG.</td>
+      <td>Fun</td>
+    </tr>
+	<tr>
+      <td>Drop</td>
+      <td>Where are we droppin' boys? The bot gives you a random place to drop.</td>
       <td>Fun</td>
     </tr>
     <tr>
@@ -298,9 +323,29 @@ function isInViewport(node) {
       <td>User</td>
     </tr>
 	<tr>
+      <td>Donate</td>
+      <td>Displays donation links to support the development of PUBG Companion</td>
+      <td>User</td>
+    </tr>
+	<tr>
       <td>Announce</td>
       <td>Makes an announcement to the specified channel</td>
       <td>Moderator</td>
+    </tr>
+	<tr>
+      <td>Setup</td>
+      <td>Starts interactive server setup tool to setup join/leave messages and roles system</td>
+      <td>Admin</td>
+    </tr>
+	<tr>
+      <td>Config</td>
+      <td>Shows the various settings and configuration of this server.</td>
+      <td>Admin</td>
+    </tr>
+	<tr>
+      <td>Role-config</td>
+      <td>Modifies the rating configuration of a pubg role.</td>
+      <td>Admin</td>
     </tr>
   </table>
 </div>
@@ -314,14 +359,6 @@ function isInViewport(node) {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="info">
-  <h3 class="w3-center">DONATE</h3>
-  <p class="w3-center"><em>Support the development of PUBG Companion and receive extra goodies based on the amount you pledged</em></p>
-  <a href="https://www.patreon.com/pubgcpn" class="w3-half w3-section w3-deep-orange w3-padding-large w3-btn">
-	<h3 class="w3-center"><i class="fab fa-patreon w3-margin-right" ></i>SUPPORT US ON PATREON</h3>
-  </a>
-  <a class="w3-half w3-section w3-paypal w3-padding-large w3-btn">
-    <h3 class="w3-center"><i class="fab fa-paypal w3-margin-right" ></i>DONATE VIA PAYPAL</h3>
-  </a>
   <h3 class="w3-center">ADDITIONAL LINKS</h3>
   <p class="w3-center"><em>PUBG Companion pages and communities</em></p>
 
