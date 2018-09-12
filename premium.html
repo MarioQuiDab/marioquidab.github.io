@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<title>PUBG Companion, a PUBG Discord Bot</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="description" content="Love PUBG Companion? Support the development and get PUBG Companion+">
+<meta name="keywords" content="discord, discord bot, pubg, pubg bot, discord bots, bot, discordjs">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="images/favicon.ico?crc=4265138217">
+<meta name="theme-color" content="#F19F00">	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+	/* Default height */
+	min-height: 100%;
+}
+
+.w3-dark-black{color: #fff;background-color: #212121;}
+.w3-deep-orange{background-color: #F96854!important;}
+.w3-paypal{color: #fff;background-color: #233E83}
+.w3-bar-item{padding: 10px 16px!important;}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+</style>
+<script>
+$(document).ready(function(){
+
+	// Populate images from data attributes.
+	$('.parallax').each(function(index) {
+		var imageSrc = $(this).data('image-src')
+		var imageHeight = $(this).data('height')
+		$(this).css('background-image','url(' + imageSrc + ')')
+		$(this).css('min-height', imageHeight)
+	})
+	
+	// Attach scroll event to window. Calculate the scroll ratio of each element
+	// and change the image position with that ratio.
+	$(window).scroll(function() {
+		var scrolled = $(window).scrollTop()
+		$('.parallax').each(function(index, element) {
+			var initY = $(this).offset().top
+			var height = $(this).height()
+			var endY  = initY + $(this).height()
+				// Check if the element is in the viewport.
+			var visible = isInViewport(this)
+			if(visible) {
+				var diff = scrolled - initY
+				var ratio = Math.round((diff / height) * 100)
+				$(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
+			}
+		})
+	})
+})
+// Check if the element is in the viewport.
+function isInViewport(node) {
+	// Am I visible? Height and Width are not explicitly necessary in visibility
+	// detection, the bottom, right, top and left are the essential checks. If an
+	// image is 0x0, it is technically not visible, so it should not be marked as
+	// such. That is why either width or height have to be > 0.
+	var rect = node.getBoundingClientRect()
+	return (
+		(rect.height > 0 || rect.width > 0) &&
+		rect.bottom >= 0 &&
+		rect.right >= 0 &&
+		rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+		rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+	)
+}
+</script>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-black">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="index.html#commands" class="w3-bar-item w3-button w3-hide-small">COMMANDS</a>
+	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
+    <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button w3-hide-small w3-hover-indigo"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
+    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-hide-small w3-right w3-blue w3-hover-amber">INVITE THE BOT</a>
+	<a href="premium.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-deep-orange w3-hover-amber">PREMIUM</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="index.html#commands" class="w3-bar-item w3-button" onclick="toggleFunction()">COMMANDS</a>
+	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
+    <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
+    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-blue">INVITE THE BOT</a>
+	<a href="premium.html" class="w3-bar-item w3-button w3-deep-orange">PREMIUM</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="parallax w3-display-container w3-opacity-min" data-image-src="https://www.pubg.com/wp-content/uploads/2018/06/notice_thumbnail_1529460559260-1600x585.jpg" data-height="400px">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">PREMIUM</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="home">
+  <h3 class="w3-xxlarge w3-center"><b>PUBG COMPANION+</b></h3>
+  <p class="w3-large w3-center"><em>A premium version of PUBG Companion+</em></p>
+  <p class="w3-center">PUBG Companion+ offers additional features to help you manage your discord server better and customise the rating on each pubg role.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fab fa-discord w3-margin-right"></i>Custom rating on each pubg role</b></p><br>
+      <img src="https://image.ibb.co/hmpCx9/Capture1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Custom rating role config" width="640" height="662">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p><b>Customise the rating points on each role to your liking</b><br>• Your custom configurations will be saved should you choose to disable the system and enable it again in the future</p>
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fas fa-user-plus w3-margin-right"></i>Welcome and leave messages</b></p><br>
+      <img src="https://preview.ibb.co/hyU1qU/Capture2.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Seasonal summaries" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p><b>Live member join and leave feed</b><br>• Customise your very own join and leave messages<br>• Includes user icon and timestamp</p>
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fas fa-cogs w3-margin-right"></i>Moderation and utility</b></p><br>
+      <img src="https://image.ibb.co/fX4yLU/prune.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Match summaries" width="640" height="662">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p><b>More moderation and utility commands</b><br>• Prune/purge command to mass delete messages<br>• More commands to come...</p>
+    </div>
+  </div>
+  <h3 class="w3-xxlarge w3-center"><b>PRICING</b></h3>
+  <p class="w3-large w3-center"><em>Support the development of PUBG Companion and get PUBG Companion+</em></p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Standard</li>
+        <li class="w3-padding-16"><b>Standard</b> PUBG Companion</li>
+        <li class="w3-padding-16"><b>PUBG</b> Features</li>
+        <li class="w3-padding-16"><b>Default fixed</b> role rating configuration</li>
+		<li class="w3-padding-16"><b>Regular</b> updates and new features</li>
+        <li class="w3-padding-16"><b>Standard</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">FREE</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-blue w3-padding-large w3-btn">INVITE THE BOT</a>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-32">PUBG Companion+</li>
+        <li class="w3-padding-16"><b>Premium isolated</b> PUBG Companion+</li>
+        <li class="w3-padding-16"><b>PUBG</b> Features</li>
+		<li class="w3-padding-16"><b>Advanced</b> moderation commands</li>
+		<li class="w3-padding-16"><b>Custom</b> welcome and leave messages</li>
+        <li class="w3-padding-16"><b>Custom</b> role rating configuration</li>
+		<li class="w3-padding-16"><b>Regular</b> updates and new features</li>
+        <li class="w3-padding-16"><b>Premium</b> Priority Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">from $5/month</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+		  <a href="https://www.patreon.com/pubgcpn" class="w3-deep-orange w3-padding-large w3-btn">
+			  <i class="fab fa-patreon w3-margin-right" ></i>SUPPORT US ON PATREON
+		  </a>
+		  <a href="https://donatebot.io/checkout/428239214426193931" class="w3-paypal w3-padding-large w3-btn">
+			  <i class="fab fa-paypal w3-margin-right" ></i>DONATE VIA PAYPAL
+		  </a>
+			<br>Make sure you are in PUBG Companion server before you make payment.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+</html>
