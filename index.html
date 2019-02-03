@@ -130,7 +130,7 @@ function isInViewport(node) {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT PUBG COMPANION</h3>
   <p class="w3-center"><em>Developed with love</em></p>
-  <p class="w3-center">PUBG Companion is the first PlayerUnknown's Battlegrounds Discord Stats Bot using data from PUBG Official API.<br>It currently supports PC and Xbox stats. Support for mobile stats is expected in the future.</p>
+  <p class="w3-center">PUBG Companion is the first PlayerUnknown's Battlegrounds Discord Stats Bot using data from PUBG Official API.<br>It currently supports Steam, Kakao, Xbox and PS4 stats.</p>
   <div class="w3-row w3-center w3-padding-16">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">Certified<i class="fa fa-certificate w3-margin-left"></i></span><br>
@@ -157,7 +157,7 @@ function isInViewport(node) {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Full seasonal statistics for pubg players in PNG Style</b><br>• Beautiful stunning PNG summary stats for all tpp or fpp gamemodes, see K/D ratio, win%, kills and matches played!<br><b>Detailed summaries for specific game modes</b><br>• Kill stats such as total kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that includes walk and ride distance, highest number of kills, longest time survived and win ratios</p>
+      <p><b>Full seasonal statistics for pubg players in PNG Style</b><br>• Beautiful stunning PNG summary stats for all tpp or fpp gamemodes, see K/D ratio, win%, kills and matches played!<br><b>Lifetime career statistics</b><br>• See all past stats combined into one lifetime png stats image<br><b>Detailed summaries for specific game modes</b><br>• Kill stats such as total kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that includes walk and ride distance, highest number of kills, longest time survived and win ratios</p>
     </div>
   </div>
   <div class="w3-row">
@@ -185,38 +185,39 @@ function isInViewport(node) {
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fab fa-discord w3-margin-right"></i>Rating Role system</b></p><br>
-      <img src="https://image.ibb.co/nNtY4p/Capture.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Rating role system" width="640" height="662">
+      <img src="https://i.ibb.co/x16gJ8K/Capture.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Rating role system" width="640" height="662">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Create pubg roles to sort your member based on their highest pubg rating</b><br>• 5 pubg roles with different ranking tiers<br>• Use p!role to allow PUBG Companion to automatically award you a role based on your highest rating accross all game modes</p>
+      <p><b>Create pubg roles to sort your member based on their highest pubg rating</b><br>• 8 pubg roles with different ranking tiers<br>• Use p!role to allow PUBG Companion to automatically award you a role based on your highest rating accross all game modes</p>
     </div>
   </div>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-gamepad w3-margin-right"></i>Fun commands</b></p><br>
       <img src="https://preview.ibb.co/e03fvT/Strat.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Strat Roulette" width="640" height="662">
+	  <img src="https://i.ibb.co/W2q3tPC/stats.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Winner command" width="640" height="662">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Fun commands such as strat roulette and upcoming image processing tools for pubg fans!</b><br>• Use strat roulette to make your pubg games with your friends more fun<br>• More fun commands coming soon</p>
+      <p><b>Fun commands such as strat roulette, drop and winner for pubg fans!</b><br>• Use strat roulette to make your pubg games with your friends more fun<br>• Drop command to let the bot choose where to drop/land<br>• Winner image command to create a nice win image</p>
     </div>
   </div>
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">100,000+</span><br>
+    <span class="w3-xlarge">350,000+</span><br>
     <i class="fa fa-users w3-margin-right"></i>Users
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">18,000+</span><br>
+    <span class="w3-xlarge">80,000+</span><br>
     <i class="fa fa-hashtag w3-margin-right"></i>Channels
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">750+</span><br>
+    <span class="w3-xlarge">3000+</span><br>
     <i class="fa fa-server w3-margin-right"></i>Servers
   </div>
   <div class="w3-quarter w3-section">
@@ -249,6 +250,11 @@ function isInViewport(node) {
     </thead>
 	<tr>
       <td>Player</td>
+      <td>Retrieves lifetime player stats</td>
+      <td>PUBG</td>
+    </tr>
+	<tr>
+      <td>Season</td>
       <td>Retrieves player stats for the current season</td>
       <td>PUBG</td>
     </tr>
