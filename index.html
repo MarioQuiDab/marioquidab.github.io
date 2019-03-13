@@ -1,416 +1,395 @@
 <!DOCTYPE html>
-<html>
-<title>PUBG Companion, a PUBG Discord Bot</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="description" content="Meet PUBG Companion, a PUBG Discord Bot powered by discordjs and the official PUBG API!">
-<meta name="keywords" content="discord, discord bot, pubg, pubg bot, discord bots, bot, discordjs">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="images/favicon.ico?crc=4265138217">
-<meta name="theme-color" content="#F19F00">	
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Meet PUBG Companion, a PUBG Discord Bot powered by discordjs and the official PUBG API!">
+		<meta name="keywords" content="discord, discord bot, pubg, pubg bot, discord bots, bot, discordjs">
+		<link rel="shortcut icon" href="images/favicon.ico?crc=4265138217">
+		<meta name="theme-color" content="#F19F00">
+		<title>PUBG Companion, a PUBG Discord Bot</title>
+		<!-- Bootstrap Core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" rel="stylesheet">
+		<!-- Custom Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="styles.css" >
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+	</head>
 
-/* Create a Parallax Effect */
-.parallax {
-    background-attachment: fixed;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-	/* Default height */
-	min-height: 100%;
-}
+	<body data-spy="scroll">
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="https://zlbjaw.bn.files.1drv.com/y4mCtBmlPCnNK7XY0YJ5LK6mPdsXLWWtBE2upKXZXQ8zOsEjJGJjCZyTbwVyRbzvsueeLfKyiHRtu40W4FDGXG0C5VhAnKszfaS05F6cWRNeJzOwbvZqGEBaq863pThGYXLgkukSn4LB_wDYyuR5su6iLzvgetHQUxBA6nkU6KTmBNdRZqoxEJeKzVJJzNngnWsXLAceARkeE-eiSEqNcLjsw" style="height: 400%; width: auto;" alt="PUBG Companion" /></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right custom-menu">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" target="_blank"><i class="fab fa-trello margin-right"></i>Trello Board</a></li>
+						<li><a href="https://discord.gg/ybcKMNK" target="_blank"><i class="fab fa-discord margin-right"></i>Discord Server</a></li>
+						<li><a href="premium.html" style="color: #E96840!important">Premium</a></li>
+						<li><a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" target="_blank" style="color: #7289DA!important">Invite the bot</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-.w3-dark-black{color: #fff;background-color: #212121;}
-.w3-deep-orange{background-color: #F96854!important;}
-.w3-paypal{color: #fff;background-color: #233E83}
-.w3-bar-item{padding: 10px 16px!important;}
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+		<!-- Header Carousel -->
+		<header id="home" class="carousel slide">
+			<ul class="cb-slideshow">
+				<li><span>image1</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>PUBG COMPANION</h3></div>
+							</div>
+						</div>
+						<h4>Player lifetime and seasonal stats, match summaries and rating role ranking system</h4>
+					</div>
+				</li>
+				<li><span>image2</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>LIFETIME &amp; SEASONAL STATS</h3></div>
+							</div>
+						</div>
+						<h4>Lifetime career statistics, detailed summaries for each gamemode and full seasonal statistics for pubg players in PNG Style</h4>
+					</div>
+				</li>
+				<li><span>image3</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>PUBG MATCH SUMMARIES</h3></div>
+							</div>
+						</div>
+						<h4>Full match summaries for up to last 10 played matches</h4>
+					</div>
+				</li>
+				<li><span>Image 04</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>PUBG ROLE RANKING SYSTEM</h3></div>
+							</div>
+						</div>
+						<h4>Create pubg roles to sort your member based on their highest pubg rating</h4>
+					</div>
+				</li>
+				<li><span>Image 05</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>PUBG FUN COMMANDS</h3></div>
+							</div>
+						</div>
+						<h4>Fun commands such as strat roulette, drop and winner for pubg fans!</h4>
+					</div>
+				</li>
+				<li><span>Image 06</span>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center"><h3>FEATURED &amp; CERTIFIED</h3></div>
+							</div>
+						</div>
+						<h4>On discordbots.org and developer.pubg.com</h4>
+					</div>
+				</li>
+			</ul>
+			<div class="intro-scroller">
+				<a class="inner-link" href="#about">
+					<div class="mouse-icon" style="opacity: 1;">
+						<div class="wheel"></div>
+					</div>
+				</a> 
+			</div>          
+		</header>
+			
+		<!-- Page Content -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10">
+						<div class="text-center">
+							<h2>About PUBG Companion</h2>
+							<img class="img-responsive displayed" src="https://i.ibb.co/fr24Lh7/short.png" alt="Company about"/>
+							<div class="row">
+								<div class="col-md-12">
+									<p>
+									PUBG Companion is the first PlayerUnknown's Battlegrounds Discord Stats Bot using data from <span class="color-elements">PUBG Official API</span>.<br>It currently supports Steam, Kakao, Xbox and PS4 stats.
+									</p>
+								</div>
+								<div class="margin-tb col-md-3">
+									<span style="font-size: 24px;">Certified<i class="fa fa-certificate margin-left"></i></span><br>
+									on discordbots.org
+								</div>
+								<div class="margin-tb col-md-3">
+									<span style="font-size: 24px;">Featured app<i class="fas fa-thumbtack margin-left"></i></span><br>
+									on developer.pubg.com
+								</div>
+								<div class="margin-tb col-md-3">
+									<span style="font-size: 24px;">Regular<i class="fa fa-plus margin-left"></i></span><br>
+									new features
+								</div>
+								<div class="margin-tb col-md-3">
+									<span style="font-size: 24px;">Timely support<i class="fa fa-wrench margin-left"></i></span><br>
+									on the bot's discord server
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 padding-large text-center">
+								<p><b><i class="fa fa-user margin-right"></i>Player profiles</b></p><br>
+								<img src="https://preview.ibb.co/dgBhp9/stats.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Seasonal summaries" width="500" height="333">
+							</div>
+							<div class="col-md-6 padding-large">
+								<p><b>Full seasonal statistics for pubg players in PNG Style</b><br>• Beautiful stunning PNG summary stats for all tpp or fpp gamemodes, see K/D ratio, win%, kills and matches played!<br><b>Lifetime career statistics</b><br>• See all past stats combined into one lifetime png stats image<br><b>Detailed summaries for specific game modes</b><br>• Kill stats such as total kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that includes walk and ride distance, highest number of kills, longest time survived and win ratios</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 padding-large text-center">
+								<p><b><i class="fa fa-user-clock margin-right"></i>Match summaries</b></p><br>
+								<img src="https://preview.ibb.co/hG9ZLT/Match.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Match summaries" width="640" height="662">
+							</div>
+							<div class="col-md-6 padding-large">
+								<p><b>Full match summaries for up to last 10 played matches</b><br>• View match stats for all your teammates with you for a match<br>• Kill stats for each teammate such as kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that survival time and placement</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 padding-large text-center">
+								<p><b><i class="fab fa-discord margin-right"></i>Discord integration</b></p><br>
+								<img src="https://preview.ibb.co/mkGs78/Profile.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Discord integration" width="640" height="662">
+							</div>
+							<div class="col-md-6 padding-large">
+								<p><b>Link your PUBG player name and region to the bot</b><br>• A mini profile for you that contains your linked PUBG name and region<br>• Use PUBG commands without the need to retype and specify your player name and region</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 padding-large text-center">
+								<p><b><i class="fab fa-discord margin-right"></i>Rating Role system</b></p><br>
+								<img src="https://i.ibb.co/x16gJ8K/Capture.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Rating role system" width="640" height="662">
+							</div>
+							<div class="col-md-6 padding-large">
+								<p><b>Create pubg roles to sort your member based on their highest pubg rating</b><br>• 8 pubg roles with different ranking tiers<br>• Use p!role to allow PUBG Companion to automatically award you a role based on your highest rating accross all game modes</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 padding-large text-center">
+								<p><b><i class="fa fa-gamepad margin-right"></i>Fun commands</b></p><br>
+								<img src="https://preview.ibb.co/e03fvT/Strat.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Strat Roulette" width="640" height="662">
+								<img src="https://i.ibb.co/W2q3tPC/stats.png" class="img-rounded img-responsive w3-opacity w3-hover-opacity-off" alt="Winner command" width="640" height="662">
+							</div>
+							<div class="col-md-6 padding-large">
+								<p><b>Fun commands such as strat roulette, drop and winner for pubg fans!</b><br>• Use strat roulette to make your pubg games with your friends more fun<br>• Drop command to let the bot choose where to drop/land<br>• Winner image command to create a nice win image</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .parallax {
-        background-attachment: scroll;
-    }
-}
-</style>
-<script>
-$(document).ready(function(){
+		<section id="stats">
+			<div class="greyback">
+				<div class="container">
+					<div class="row padding-16 text-center">
+						<div class="margin-tb col-md-3">
+							<span style="font-size: 24px;">350,000+</span><br>
+							<i class="fa fa-users margin-right"></i>Users
+						</div>
+						<div class="margin-tb col-md-3">
+							<span style="font-size: 24px;">80,000+</span><br>
+							<i class="fa fa-hashtag margin-right"></i>Channels
+						</div>
+						<div class="margin-tb col-md-3">
+							<span style="font-size: 24px;">3000+</span><br>
+							<i class="fa fa-server margin-right"></i>Servers
+						</div>
+						<div class="margin-tb col-md-3">
+							<span style="font-size: 24px;">99.99%</span><br>
+							<i class="fa fa-chart-line margin-right"></i>Uptime
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-	// Populate images from data attributes.
-	$('.parallax').each(function(index) {
-		var imageSrc = $(this).data('image-src')
-		var imageHeight = $(this).data('height')
-		$(this).css('background-image','url(' + imageSrc + ')')
-		$(this).css('min-height', imageHeight)
-	})
+		<section id="links">
+			<div class="container">
+				<div class="text-center"><h2>Links</h2>
+					<img class="img-responsive displayed" src="https://i.ibb.co/fr24Lh7/short.png" alt="about">
+				</div>
+				<div class="row">
+					<div class="col-md-12 homeport1">
+						<div class="col-md-4 col-sm-12 col-xs-12 portfolio-item">
+							<figure class="effect-oscar">
+								<img src="https://i.ibb.co/tYkyWtg/blog3.jpg" alt="img09" class="img-responsive" />
+								<figcaption>
+									<h2><i class="fa fa-link margin-right"></i>Website</h2>
+									<a href="https://pubgcpn.win/" target="_blank">View more</a>
+								</figcaption>           
+							</figure>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12 portfolio-item">
+							<figure class="effect-oscar">
+								<img src="https://i.ibb.co/vhdBZRL/blog2.jpg" alt="img09" class="img-responsive"/>
+								<figcaption>
+									<h2><i class="fab fa-discord margin-right"></i>Discord</h2>
+									<a href="https://discord.gg/ybcKMNK" target="_blank">View more</a>
+								</figcaption>           
+							</figure>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12 portfolio-item">
+							<figure class="effect-oscar">
+								<img src="https://i.ibb.co/tYkyWtg/blog3.jpg" alt="img09" class="img-responsive"/>
+								<figcaption>
+									<h2><i class="fab fa-trello margin-right"></i>Trello</h2>
+									<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" target="_blank">View more</a>
+								</figcaption>           
+							</figure>
+						</div>
+					</div>
+					<div class="col-md-12 text-center margin-tb">
+						<a href="https://discordbots.org/bot/428476808141209600" >
+							<img src="https://discordbots.org/api/widget/428476808141209600.svg" alt="PUBG Companion" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Footer -->
+		<footer id="footer" class="footer">
+			<div class="container">
+
+				<div class="footer-info">
+					<div class="col-md-4 col-sm-4 footer-info-grid links">
+						<h4>QUICK LINKS</h4>
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#stats">Stats</a></li>
+							<li><a href="#links">Links</a></li>
+							<li><a href="premium.html">Premium</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 footer-info-grid links">
+						<h4>EXTERNAL LINKS</h4>
+						<ul>
+							<li><a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" target="_blank">Trello Board</a></li>
+							<li><a href="https://discord.gg/ybcKMNK" target="_blank">Discord Server</a></li>
+							<li><a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" target="_blank">Invite the bot</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 footer-info-grid links">
+						<h4>DEVELOPED BY</h4>
+						<ul>
+							<li><a href="https://github.com/Jovin-Ang" target="_blank">Jovin Ang</a></li>
+							<li><a href="https://github.com/Flygoow" target="_blank">Jérémy</a></li>
+							<li><a href="https://github.com/Arkac">Arkac</a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<div class="copyright">
+					<p>&copy; 2019 PUBG Companion. All Rights Reserved | Design by <a href="http://www.atis.al">ATIS</a></p>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer -->
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
-	// Attach scroll event to window. Calculate the scroll ratio of each element
-	// and change the image position with that ratio.
-	$(window).scroll(function() {
-		var scrolled = $(window).scrollTop()
-		$('.parallax').each(function(index, element) {
-			var initY = $(this).offset().top
-			var height = $(this).height()
-			var endY  = initY + $(this).height()
-				// Check if the element is in the viewport.
-			var visible = isInViewport(this)
-			if(visible) {
-				var diff = scrolled - initY
-				var ratio = Math.round((diff / height) * 100)
-				$(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
-			}
-		})
-	})
-})
-// Check if the element is in the viewport.
-function isInViewport(node) {
-	// Am I visible? Height and Width are not explicitly necessary in visibility
-	// detection, the bottom, right, top and left are the essential checks. If an
-	// image is 0x0, it is technically not visible, so it should not be marked as
-	// such. That is why either width or height have to be > 0.
-	var rect = node.getBoundingClientRect()
-	return (
-		(rect.height > 0 || rect.width > 0) &&
-		rect.bottom >= 0 &&
-		rect.right >= 0 &&
-		rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-		rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-	)
-}
-</script>
-<body>
+		<!--Jquery Smooth Scrolling-->
+		<script>
+			$(document).ready(function(){
+				$('.custom-menu a[href^="#"], .intro-scroller .inner-link').on('click',function (e) {
+					e.preventDefault();
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-black">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#commands" class="w3-bar-item w3-button w3-hide-small">COMMANDS</a>
-	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
-    <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button w3-hide-small w3-hover-indigo"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
-    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-hide-small w3-right w3-blue w3-hover-amber">INVITE THE BOT</a>
-	<a href="premium.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-deep-orange w3-hover-amber">PREMIUM</a>
-  </div>
+					var target = this.hash;
+					var $target = $(target);
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#commands" class="w3-bar-item w3-button" onclick="toggleFunction()">COMMANDS</a>
-	<a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-trello w3-margin-right"></i>TRELLO BOARD</a>
-    <a href="https://discord.gg/ybcKMNK" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fab fa-discord w3-margin-right"></i>DISCORD SERVER</a>
-    <a href="https://discordapp.com/api/oauth2/authorize?client_id=428476808141209600&permissions=268954689&scope=bot" class="w3-bar-item w3-button w3-blue">INVITE THE BOT</a>
-	<a href="premium.html" class="w3-bar-item w3-button w3-deep-orange">PREMIUM</a>
-  </div>
-</div>
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top
+					}, 900, 'swing', function () {
+						window.location.hash = target;
+					});
+				});
 
-<!-- First Parallax Image with Logo Text -->
-<div class="parallax w3-display-container" id="home" data-image-src="https://raw.githubusercontent.com/MarioQuiDab/marioquidab.github.io/master/PUBGBack.png">
-	<div class="w3-display-left w3-text-white" style="padding:48px">
-		<span class="w3-jumbo w3-hide-small">PUBG Companion</span><br>
-		<span class="w3-xxlarge w3-hide-large w3-hide-medium">PUBG Companion</span><br>
-		<span class="w3-large">Player seasonal stats, match summaries and rating role ranking system</span>
-		<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
-	</div> 
-</div>
+				$('a.page-scroll').bind('click', function(event) {
+					var $anchor = $(this);
+					$('html, body').stop().animate({
+						scrollTop: $($anchor.attr('href')).offset().top
+					}, 1500, 'easeInOutExpo');
+					event.preventDefault();
+				});
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT PUBG COMPANION</h3>
-  <p class="w3-center"><em>Developed with love</em></p>
-  <p class="w3-center">PUBG Companion is the first PlayerUnknown's Battlegrounds Discord Stats Bot using data from PUBG Official API.<br>It currently supports Steam, Kakao, Xbox and PS4 stats.</p>
-  <div class="w3-row w3-center w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Certified<i class="fa fa-certificate w3-margin-left"></i></span><br>
-    on discordbots.org
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Featured app<i class="fas fa-thumbtack w3-margin-left"></i></span><br>
-    on developer.pubg.com
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Regular<i class="fa fa-plus w3-margin-left"></i></span><br>
-    new features
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Timely support<i class="fa fa-wrench w3-margin-left"></i></span><br>
-    on the bot's discord server
-  </div>
-</div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Player profiles</b></p><br>
-      <img src="https://preview.ibb.co/dgBhp9/stats.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Seasonal summaries" width="500" height="333">
-    </div>
+			   $(".nav a").on("click", function(){
+					 $(".nav").find(".active").removeClass("active");
+					$(this).parent().addClass("active");
+				});
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Full seasonal statistics for pubg players in PNG Style</b><br>• Beautiful stunning PNG summary stats for all tpp or fpp gamemodes, see K/D ratio, win%, kills and matches played!<br><b>Lifetime career statistics</b><br>• See all past stats combined into one lifetime png stats image<br><b>Detailed summaries for specific game modes</b><br>• Kill stats such as total kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that includes walk and ride distance, highest number of kills, longest time survived and win ratios</p>
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user-clock w3-margin-right"></i>Match summaries</b></p><br>
-      <img src="https://preview.ibb.co/hG9ZLT/Match.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Match summaries" width="640" height="662">
-    </div>
+				$('body').append('<div id="toTop" class="btn btn-primary color1"><span class="glyphicon glyphicon-chevron-up"></span></div>');
+					$(window).scroll(function () {
+						if ($(this).scrollTop() != 0) {
+							$('#toTop').fadeIn();
+						} else {
+							$('#toTop').fadeOut();
+						}
+					}); 
+				$('#toTop').click(function(){
+					$("html, body").animate({ scrollTop: 0 }, 700);
+					return false;
+				});
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Full match summaries for up to last 10 played matches</b><br>• View match stats for all your teammates with you for a match<br>• Kill stats for each teammate such as kills and assists, damage dealt, headshot kills, vehicle kills<br>• Game stats that survival time and placement</p>
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fab fa-discord w3-margin-right"></i>Discord integration</b></p><br>
-      <img src="https://preview.ibb.co/mkGs78/Profile.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Discord integration" width="640" height="662">
-    </div>
+			});
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Link your PUBG player name and region to the bot</b><br>• A mini profile for you that contains your linked PUBG name and region<br>• Use PUBG commands without the need to retype and specify your player name and region</p>
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fab fa-discord w3-margin-right"></i>Rating Role system</b></p><br>
-      <img src="https://i.ibb.co/x16gJ8K/Capture.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Rating role system" width="640" height="662">
-    </div>
+		</script>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Create pubg roles to sort your member based on their highest pubg rating</b><br>• 8 pubg roles with different ranking tiers<br>• Use p!role to allow PUBG Companion to automatically award you a role based on your highest rating accross all game modes</p>
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-gamepad w3-margin-right"></i>Fun commands</b></p><br>
-      <img src="https://preview.ibb.co/e03fvT/Strat.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Strat Roulette" width="640" height="662">
-	  <img src="https://i.ibb.co/W2q3tPC/stats.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Winner command" width="640" height="662">
-    </div>
+		<script>
+		function gallery(){};
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p><b>Fun commands such as strat roulette, drop and winner for pubg fans!</b><br>• Use strat roulette to make your pubg games with your friends more fun<br>• Drop command to let the bot choose where to drop/land<br>• Winner image command to create a nice win image</p>
-    </div>
-  </div>
-</div>
+		var $itemsHolder = $('ul.port2');
+		var $itemsClone = $itemsHolder.clone(); 
+		var $filterClass = "";
+		$('ul.filter li').click(function(e) {
+		e.preventDefault();
+		$filterClass = $(this).attr('data-value');
+			if($filterClass == 'all'){ var $filters = $itemsClone.find('li'); }
+			else { var $filters = $itemsClone.find('li[data-type='+ $filterClass +']'); }
+			$itemsHolder.quicksand(
+			  $filters,
+			  { duration: 1000 },
+			  gallery
+			  );
+		});
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">350,000+</span><br>
-    <i class="fa fa-users w3-margin-right"></i>Users
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">80,000+</span><br>
-    <i class="fa fa-hashtag w3-margin-right"></i>Channels
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3000+</span><br>
-    <i class="fa fa-server w3-margin-right"></i>Servers
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">99.99%</span><br>
-    <i class="fa fa-chart-line w3-margin-right"></i>Uptime
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="parallax w3-display-container w3-opacity-min" data-image-src="https://d1wfiv6sf8d64f.cloudfront.net/admin/web/real/notice_thumbnail_1527758364795.jpg" data-height="400px">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">COMMANDS</span>
-  </div>
-</div>
-
-<!-- Container (Commands Section) -->
-<div class="w3-content w3-container w3-padding-64" id="commands">
-  <h3 class="w3-center">COMMANDS</h3>
-  <p class="w3-center"><em>Use <span class="w3-tag w3-light-grey">p!help</span> to see all commands. For more info about a command, use <span class="w3-tag w3-light-grey">p!help [command name]</span></em></p>
-  <p class="w3-center"><em>The bot has three prefixes: <span class="w3-tag w3-light-grey">p!</span> <span class="w3-tag w3-light-grey">P!</span> and <span class="w3-tag w3-light-grey">@PUBG Companion</span>.</em></p><br>
-	
-  <!-- Commands table -->
-  <table class="w3-table-all w3-hoverable">
-    <thead>
-      <tr class="w3-dark-gray">
-        <th>Command</th>
-        <th>Description</th>
-        <th>Group</th>
-      </tr>
-    </thead>
-	<tr>
-      <td>Player</td>
-      <td>Retrieves lifetime player stats</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Season</td>
-      <td>Retrieves player stats for the current season</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Match</td>
-      <td>Retrieves match data (up to last 10 played matches) for specified player</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Role</td>
-      <td>Gives you to a role based on your highest rating across all gamemodes</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Profile</td>
-      <td>Shows your discord profile with your player name and region</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Save</td>
-      <td>Links your pubg player and region to your discord account</td>
-      <td>PUBG</td>
-    </tr>
-	<tr>
-      <td>Strat</td>
-      <td>Strat Roulette! Generates a stupid strat for PUBG.</td>
-      <td>Fun</td>
-    </tr>
-	<tr>
-      <td>Drop</td>
-      <td>Where are we droppin' boys? The bot gives you a random place to drop.</td>
-      <td>Fun</td>
-    </tr>
-    <tr>
-      <td>Help</td>
-      <td>Displays a list of commands.</td>
-      <td>User</td>
-    </tr>
-    <tr>
-      <td>Ping</td>
-      <td>Returns the ping to the channel</td>
-      <td>User</td>
-    </tr>
-    <tr>
-      <td>Stats</td>
-      <td>Provides global statistics about PUBG Companion</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Info</td>
-      <td>Gets infomation about a specific user or the current server</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Invite</td>
-      <td>Provides infomation about inviting PUBG Companion to a server</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Support</td>
-      <td>Gets a link to the bot's support hub/server</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Updates</td>
-      <td>Retrieves infomation about PUBG Companion's latest update from her support hub</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Upvote</td>
-      <td>Liking PUBG Companion? Click on that big VOTE button and give it some love</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Donate</td>
-      <td>Displays donation links to support the development of PUBG Companion</td>
-      <td>User</td>
-    </tr>
-	<tr>
-      <td>Announce</td>
-      <td>Makes an announcement to the specified channel</td>
-      <td>Moderator</td>
-    </tr>
-	<tr>
-      <td>Setup</td>
-      <td>Starts interactive server setup tool to setup join/leave messages and roles system</td>
-      <td>Admin</td>
-    </tr>
-	<tr>
-      <td>Config</td>
-      <td>Shows the various settings and configuration of this server.</td>
-      <td>Admin</td>
-    </tr>
-	<tr>
-      <td>Role-config</td>
-      <td>Modifies the rating configuration of a pubg role.</td>
-      <td>Admin</td>
-    </tr>
-  </table>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="parallax w3-display-container w3-opacity-min" data-image-src="https://www.pubg.com/wp-content/uploads/2018/06/notice_thumbnail_1529460559260-1600x585.jpg" data-height="400px">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">ADDITIONAL INFO</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="info">
-  <h3 class="w3-center">ADDITIONAL LINKS</h3>
-  <p class="w3-center"><em>PUBG Companion pages and communities</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-	  <img src="https://preview.ibb.co/cV5ih8/visual_main.jpg" class="w3-round-large w3-image" alt="Strat Roulette" width="640" height="662">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-link fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Website: <a href="https://pubgcpn.win/">https://pubgcpn.win/</a><br>
-        <i class="fab fa-discord fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Discord server: <a href="https://discord.gg/ybcKMNK">https://discord.gg/pubgcompanion</a><br>
-        <i class="fab fa-trello fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Trello: <a href="https://trello.com/b/eFtyzHVw/pubg-companion-bot-development">https://trello.com/b/pubg-companion-bot-development</a><br>
-      </div>
-      <a href="https://discordbots.org/bot/428476808141209600" >
-		<img src="https://discordbots.org/api/widget/428476808141209600.svg" alt="PUBG Companion" />
-	  </a>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-</footer>
- 
-<script>
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+		$(document).ready(gallery);
+		</script>
 </body>
 </html>
+
+
+
+
